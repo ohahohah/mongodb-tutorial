@@ -1,5 +1,3 @@
-set -e
-
 # Import the public key used by the package management system
 sudo apt-get install gnupg
 wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
@@ -15,8 +13,8 @@ wget https://raw.githubusercontent.com/ohahohah/mongodb-tutorial/main/mongod.con
 
 # Run Mongodb
 sudo service mongod start
-echo '========================processing========================mongod start'
 sleep 15
+netstat -tnlp
 
 # setting - create user
 mongo admin --eval 'db.createUser({user: "kkk", pwd: "kkkk", roles:["root"]});'
