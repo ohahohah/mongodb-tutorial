@@ -9,7 +9,7 @@ sudo apt-get install -y mongodb-org=5.0.2 mongodb-org-database=5.0.2 mongodb-org
 sudo mkdir -p /data/db
 
 # get mongodb config file
-wget -q0 
+wget https://raw.githubusercontent.com/ohahohah/mongodb-tutorial/main/mongod.conf
 
 # Run Mongodb
 sudo service mongod start
@@ -20,7 +20,7 @@ netstat -tnlp
 mongo admin --eval 'db.createUser({user: "myuser", pwd: "mypassword", roles:["root"]});'
 
 # replace config - bindip,security 
-cat A > /etc/mongod.conf
+cat /root/mongod.conf > /etc/mongod.conf
 
 # restart mongodb
 sudo service mongod stop
