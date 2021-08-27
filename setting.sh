@@ -13,6 +13,7 @@ wget https://raw.githubusercontent.com/ohahohah/mongodb-tutorial/main/mongod.con
 
 # Run Mongodb
 sudo service mongod start
+echo '========================processing========================mongod start'
 sleep 15
 
 # setting - create user
