@@ -1,3 +1,5 @@
+set -e
+
 # Import the public key used by the package management system
 sudo apt-get install gnupg
 wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
