@@ -14,7 +14,6 @@ wget https://raw.githubusercontent.com/ohahohah/mongodb-tutorial/main/mongod.con
 # Run Mongodb
 sudo service mongod start
 sleep 15
-netstat -tnlp
 
 # setting - create user
 mongo admin --eval 'db.createUser({user: "myuser", pwd: "mypassword", roles:["root"]});'
