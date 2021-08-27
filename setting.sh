@@ -17,7 +17,7 @@ echo '========================processing========================mongod start'
 sleep 15
 
 # setting - create user
-mongo admin --eval 'db.createUser({user: "myuser", pwd: "mypassword", roles:["root"]});'
+mongo admin --eval 'db.createUser({user: "kkk", pwd: "kkkk", roles:["root"]});'
 
 # replace config - bindip,security 
 cat /root/mongod.conf > /etc/mongod.conf
