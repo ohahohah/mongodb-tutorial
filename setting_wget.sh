@@ -9,9 +9,6 @@ sudo apt-get update
 sudo apt-get install -y mongodb-org=5.0.2 mongodb-org-database=5.0.2 mongodb-org-server=5.0.2 mongodb-org-shell=5.0.2 mongodb-org-mongos=5.0.2 mongodb-org-tools=5.0.2
 sudo mkdir -p /data/db
 
-# get mongodb config file
-wget https://raw.githubusercontent.com/ohahohah/mongodb-tutorial/main/mongod.conf
-
 # Run Mongodb
 sudo service mongod start
 sleep 15
@@ -21,6 +18,7 @@ netstat -tnlp
 mongo admin --eval 'db.createUser({user: "kkk", pwd: "kkkk", roles:["root"]});'
 
 # replace config - bindip,security 
+wget https://raw.githubusercontent.com/ohahohah/mongodb-tutorial/main/mongod.conf
 cat /root/mongod.conf > /etc/mongod.conf
 
 # restart mongodb
